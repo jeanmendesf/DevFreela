@@ -31,8 +31,17 @@ namespace DevFreela.API.Controllers
         //Devemos receber o id, para ver qual item será atualizado
         //Devemos receber o item atualizado, para atualizar o BD
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] UpdateProjectModel)
+        public IActionResult Put(int id, [FromBody] UpdateProjectModel updateProject)
         {
+            return NoContent();
+        }
+
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            //Buscar, se não existir, notFound
+
             return NoContent();
         }
     }
