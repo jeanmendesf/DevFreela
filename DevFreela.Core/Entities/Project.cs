@@ -40,6 +40,15 @@ namespace DevFreela.Core.Entities
             }
         }
 
+        public void Start()
+        {
+            if (Status == ProjectStatusEnum.Created)
+            {
+                Status = ProjectStatusEnum.InProgress;
+                StartedAt = DateTime.Now;
+            }
+        }
+
         public void Finish()
         {
             if (Status == ProjectStatusEnum.InProgress)
@@ -49,14 +58,7 @@ namespace DevFreela.Core.Entities
             }
         }
 
-        public void Start()
-        {
-            if (Status == ProjectStatusEnum.Created)
-            {
-                Status = ProjectStatusEnum.InProgress;
-                StartedAt = DateTime.Now;
-            }
-        }
+       
 
         //Temporário
         public void Update(string title, string description, decimal totalCost)
