@@ -31,5 +31,14 @@ namespace DevFreela.Core.Entities
         public List<Project> OwnedProjects { get; private set; }
         public List<Project> FreelanceProjects { get; private set; }
 
+
+        //Temporário
+        public void Update(string fullName, string email, DateTime birthDate)
+        {
+            FullName = fullName;
+            Email = email;
+            BirthDate= birthDate;
+        }
+
     }
 }
